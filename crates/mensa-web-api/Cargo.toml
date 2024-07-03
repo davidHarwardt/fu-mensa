@@ -1,0 +1,20 @@
+[package]
+name = "mensa-web-api"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+anyhow = "1.0.86"
+axum = { version = "0.7.5", features = ["json", "macros"] }
+chrono = { version = "0.4.38", features = ["serde"] }
+mensa-meal-api = { version = "0.1.0", path = "../mensa-meal-api" }
+mongodb = { version = "2.8.2", features = ["bson-chrono-0_4"] }
+reqwest = { version = "0.12.4", features = ["json", "rustls-tls"] }
+serde = { version = "1.0.202", features = ["derive"] }
+thiserror = "1.0.61"
+tokio = { version = "1.37.0", features = ["signal", "rt-multi-thread", "macros", "net", "fs"] }
+tokio-cron-scheduler = "0.10.2"
+toml = "0.8.13"
+tracing = "0.1.40"
+tracing-subscriber = "0.3.18"
+
